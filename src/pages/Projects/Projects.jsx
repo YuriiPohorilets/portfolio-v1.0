@@ -1,3 +1,10 @@
+import { Section } from 'shared/Section';
+import { Container } from 'shared/Container';
+
 export const Projects = () => {
-  return <div>Projects</div>;
+  return (
+    <Section>
+      <Container>Projects</Container>
+    </Section>
+  );
 };

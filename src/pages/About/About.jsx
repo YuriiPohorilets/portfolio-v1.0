@@ -1,3 +1,10 @@
+import { Section } from 'shared/Section';
+import { Container } from 'shared/Container';
+
 export const About = () => {
-  return <div>About</div>;
+  return (
+    <Section>
+      <Container>About</Container>
+    </Section>
+  );
 };
