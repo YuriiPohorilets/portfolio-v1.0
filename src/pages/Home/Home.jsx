@@ -45,14 +45,20 @@ export const Home = () => {
               —
             </Typography>
             <Typography component="h1" sx={{ ...accentTextStyle, mb: '48px' }}>
-              Frontend Developer
+              Junior Frontend Developer
             </Typography>
 
             <Box sx={buttonWrapperStyle}>
-              <Button variant="outlined" sx={outlinedButtonStyle}>
+              <Button
+                variant="outlined"
+                component="a"
+                target="_blank"
+                href="https://drive.google.com/file/d/1djD_kJykntesXbu4bwGBdBsOlCYi7H8E/view?usp=share_link"
+                sx={outlinedButtonStyle}
+              >
                 Get CV <OpenInNewIcon sx={{ ml: '8px' }} />
               </Button>
-              <Button variant="contained" sx={containedButtonStyle}>
+              <Button variant="contained" component="a" href="#contacts" sx={containedButtonStyle}>
                 Hire me
               </Button>
             </Box>
