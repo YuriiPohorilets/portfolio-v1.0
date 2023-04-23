@@ -1,10 +1,13 @@
 import { Section } from 'shared/Section';
 import { Container } from 'shared/Container';
+import { Title } from 'shared/Title';
 
 export const About = () => {
   return (
     <Section>
-      <Container>About</Container>
+      <Container>
+        <Title>About me</Title>
+      </Container>
     </Section>
   );
 };

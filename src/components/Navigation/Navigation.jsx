@@ -1,14 +1,16 @@
 import { List, ListItem, Button } from '@mui/material';
-import { navButtonStyle } from './navigationStyles';
+import { navListStyle, navItemStyle, navButtonStyle } from './navigationStyles';
 import { navList } from 'services/constants';
 
 export const Navigation = () => {
   return (
-    <List sx={{ display: 'flex', p: 0, gap: '18px' }}>
+    <List sx={navListStyle}>
       {navList.map(item => {
         return (
-          <ListItem key={item} sx={{ width: 'auto', p: 0 }}>
-            <Button sx={navButtonStyle}>{item}</Button>
+          <ListItem key={item} sx={navItemStyle}>
+            <Button component="a" href={`#${item}`} sx={navButtonStyle}>
+              {item}
+            </Button>
           </ListItem>
         );
       })}

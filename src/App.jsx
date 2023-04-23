@@ -9,7 +9,17 @@ import { Contacts } from 'pages/Contacts/Contacts';
 export const App = () => {
   return (
     <>
-      <Box component="header" sx={{ py: '18px', bgcolor: 'primary.darker' }}>
+      <Box
+        component="header"
+        sx={{
+          py: '18px',
+          bgcolor: 'primary.darker',
+          position: 'fixed',
+          width: '100%',
+          zIndex: 99,
+          boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
+        }}
+      >
         <AppBar />
       </Box>
 
@@ -24,19 +34,19 @@ export const App = () => {
           scrollSnapType: 'y mandatory',
         }}
       >
-        <Wrapper>
+        <Wrapper id="home">
           <Home />
         </Wrapper>
 
-        <Wrapper>
+        <Wrapper id="about">
           <About />
         </Wrapper>
 
-        <Wrapper>
+        <Wrapper id="projects">
           <Projects />
         </Wrapper>
 
-        <Wrapper>
+        <Wrapper id="contacts">
           <Contacts />
         </Wrapper>
       </Box>

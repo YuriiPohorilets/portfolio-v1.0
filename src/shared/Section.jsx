@@ -2,7 +2,7 @@ import { Box } from '@mui/material';
 
 export const Section = ({ children }) => {
   return (
-    <Box component="section" sx={{ py: '60px' }}>
+    <Box component="section" sx={{ pt: '120px', pb: '60px' }}>
       {children}
     </Box>
   );

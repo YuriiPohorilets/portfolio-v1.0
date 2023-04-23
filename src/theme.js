@@ -11,7 +11,8 @@ export const theme = createTheme({
       main: '#DDDDDD',
     },
     active: {
-      accent: 'rgba(170, 139, 86, 0.1)',
+      main: '#a88241',
+      accent: 'rgba(170, 139, 86, 0.25)',
       neutral: 'rgba(221, 221, 221, 0.1)',
     },
   },
