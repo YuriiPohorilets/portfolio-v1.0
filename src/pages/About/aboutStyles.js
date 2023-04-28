@@ -4,7 +4,7 @@ export const wrapperStyle = {
 };
 
 export const primaryTextStyle = {
-  fontWeight: 400,
+  fontWeight: 300,
   fontSize: '24px',
   lineHeight: 1.51,
 };
@@ -19,8 +19,10 @@ export const skillListStyle = {
 export const skillItemStyle = {
   p: '8px 16px',
   width: 'auto',
+
   fontSize: '14px',
   lineHeight: 1.21,
+
   border: '1px solid #AA8B56',
   borderColor: 'primary.accent',
   borderRadius: '8px',

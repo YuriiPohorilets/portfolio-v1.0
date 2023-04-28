@@ -1,14 +1,20 @@
 import { List, ListItem, Button } from '@mui/material';
-import { navListStyle, navItemStyle, navButtonStyle } from './navigationStyles';
 import { navList } from 'services/constants';
+import { navListStyle, navItemStyle, navButtonStyle } from './navigationStyles';
 
-export const Navigation = () => {
+export const Navigation = ({ selectedPage, setSelectedPage }) => {
   return (
     <List sx={navListStyle}>
       {navList.map(item => {
         return (
           <ListItem key={item} sx={navItemStyle}>
-            <Button component="a" href={`#${item}`} sx={navButtonStyle}>
+            <Button
+              className={selectedPage === item ? 'active' : ''}
+              component="a"
+              href={`#${item}`}
+              onClick={() => setSelectedPage(item)}
+              sx={navButtonStyle}
+            >
               {item}
             </Button>
           </ListItem>

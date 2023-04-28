@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Box } from '@mui/material';
 import { Wrapper } from 'shared/Wrapper';
 import { AppBar } from 'components/AppBar/AppBar';
@@ -5,35 +6,18 @@ import { Home } from 'pages/Home/Home';
 import { About } from 'pages/About/About';
 import { Projects } from 'pages/Projects/Projects';
 import { Contacts } from 'pages/Contacts/Contacts';
+import { headerStyle, smoothContainerStyle } from 'commonStyles';
 
 export const App = () => {
+  const [selectedPage, setSelectedPage] = useState('home');
+
   return (
     <>
-      <Box
-        component="header"
-        sx={{
-          py: '18px',
-          bgcolor: 'primary.darker',
-          position: 'fixed',
-          width: '100%',
-          zIndex: 99,
-          boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
-        }}
-      >
-        <AppBar />
+      <Box component="header" sx={headerStyle}>
+        <AppBar selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
       </Box>
 
-      <Box
-        component="main"
-        sx={{
-          position: 'relative',
-          width: '100%',
-          height: '100vh',
-          scrollBehavior: 'smooth',
-          overflow: 'auto',
-          scrollSnapType: 'y mandatory',
-        }}
-      >
+      <Box component="main" sx={smoothContainerStyle}>
         <Wrapper id="home">
           <Home />
         </Wrapper>

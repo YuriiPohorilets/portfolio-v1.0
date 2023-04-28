@@ -13,6 +13,7 @@ export const photoStyle = {
 
 export const primaryTextStyle = {
   mb: '8px',
+
   fontWeight: 300,
   fontSize: '32px',
   lineHeight: 1.22,
@@ -20,6 +21,7 @@ export const primaryTextStyle = {
 
 export const accentTextStyle = {
   maxWidth: '480px',
+
   fontWeight: 900,
   fontSize: '48px',
   lineHeight: 1.22,

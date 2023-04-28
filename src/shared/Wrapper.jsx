@@ -1,11 +1,9 @@
 import { Box } from '@mui/material';
+import { wrapperStyle } from 'commonStyles';
 
 export const Wrapper = ({ children, id }) => {
   return (
-    <Box
-      id={id}
-      sx={{ width: '100%', height: '100vh', backgroundSize: 'cover', scrollSnapAlign: 'start' }}
-    >
+    <Box id={id} sx={wrapperStyle}>
       {children}
     </Box>
   );

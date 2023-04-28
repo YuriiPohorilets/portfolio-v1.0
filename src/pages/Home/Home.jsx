@@ -2,6 +2,7 @@ import { Box, Typography, Button } from '@mui/material';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { Section } from 'shared/Section';
 import { Container } from 'shared/Container';
+import Photo from 'img/photo.webp';
 import {
   wrapperStyle,
   photoStyle,
@@ -9,15 +10,14 @@ import {
   accentTextStyle,
   buttonWrapperStyle,
 } from './homeStyles';
-import { outlinedButtonStyle, containedButtonStyle } from 'shared/commonStyles';
-import Photo from 'img/photo.webp';
+import { outlinedButtonStyle, containedButtonStyle } from 'commonStyles';
 
 export const Home = () => {
   return (
     <Section>
       <Container>
         <Box sx={wrapperStyle}>
-          <Box>
+          <Box sx={{ width: '536px' }}>
             <Box
               component="img"
               src={Photo}

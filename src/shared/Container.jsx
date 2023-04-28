@@ -1,5 +1,6 @@
 import { Box } from '@mui/material';
+import { containerStyle } from 'commonStyles';
 
 export const Container = ({ children }) => {
-  return <Box sx={{ mx: 'auto', px: '15px', maxWidth: '1280px' }}>{children}</Box>;
+  return <Box sx={containerStyle}>{children}</Box>;
 };
