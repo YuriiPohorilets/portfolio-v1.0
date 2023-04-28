@@ -60,7 +60,7 @@ export const buttonStyle = {
   fontWeight: '400',
   fontSize: '24px',
   lineHeight: 1.21,
-  textTransform: 'capitalize',
+  textTransform: 'none',
 
   borderRadius: '8px',
   boxShadow: '0 2px 2px rgba(0, 0, 0, 0.25)',
