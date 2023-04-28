@@ -1,12 +1,16 @@
 export const itemStyle = {
-  p: '16px',
-  maxWidth: '366px',
+  p: '24px 16px',
+  // maxWidth: '366px',
   height: '100%',
 
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'flex-start',
   gap: '8px',
+
+  bgcolor: 'active.neutral',
+  borderRadius: '8px',
+  // boxShadow: '2px 5px 10px rgba(0, 0, 0, 0.3)',
 };
 
 export const titleStyle = {
@@ -16,7 +20,7 @@ export const titleStyle = {
 };
 
 export const imageWrapperStyle = {
-  width: '334px',
+  width: '100%',
   height: '170px',
 
   borderRadius: '8px',
@@ -27,13 +31,13 @@ export const imageWrapperStyle = {
 export const imageStyle = {
   maxWidth: '100%',
   height: '170px',
+  objectFit: 'cover',
 };
 
 export const skillListStyle = {
   display: 'flex',
   flexWrap: 'wrap',
   gap: '8px',
-  flexGrow: 1,
   alignItems: 'flex-start',
 };
 

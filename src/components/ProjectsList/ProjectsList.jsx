@@ -1,15 +1,30 @@
-import { List } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Scrollbar } from 'swiper';
+import { Autoplay } from 'swiper';
 import { ProjectsItem } from 'components/ProjectsItem/ProjectsItem';
 import { projectsList } from 'data/about';
-import { listStyle } from './projectsListStyle';
 import 'swiper/css';
-import 'swiper/css/scrollbar';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 export const ProjectsList = () => {
   return (
-    <List as={Swiper} component="ul" modules={[Scrollbar]} slidesPerView={3} sx={listStyle}>
+    <Swiper
+      modules={[Autoplay]}
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: true,
+      }}
+      rewind={true}
+      slidesPerView={1}
+      spaceBetween={36}
+      grabCursor={true}
+      breakpoints={{
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 36,
+        },
+      }}
+    >
       {projectsList.map(projectItem => {
         return (
           <SwiperSlide key={projectItem.id} style={{ height: 'auto' }}>
@@ -17,6 +32,6 @@ export const ProjectsList = () => {
           </SwiperSlide>
         );
       })}
-    </List>
+    </Swiper>
   );
 };

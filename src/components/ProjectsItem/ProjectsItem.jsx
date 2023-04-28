@@ -23,7 +23,7 @@ export const ProjectsItem = ({ project }) => {
           component="img"
           src={prevImg}
           alt={description}
-          width={334}
+          width={361}
           height={170}
           sx={imageStyle}
         />
